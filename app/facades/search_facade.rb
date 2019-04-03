@@ -5,6 +5,10 @@ class SearchFacade
     @house = house
   end
 
+  def total_members
+    service.get_members.count
+  end
+
   def members
     response = service.get_members
     response.map do |member_data|
