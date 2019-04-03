@@ -9,6 +9,13 @@ class SearchFacade
     service.get_members.count
   end
 
+  # def members
+  #   response = service.get_members
+  #   response.map do |member_data|
+  #     Member.new(member_data)
+  #   end
+  # end
+
   def members
     response = service.get_members
     response.map do |member_data|
@@ -17,7 +24,7 @@ class SearchFacade
   end
 
   def service
-    HogwartsService.new(@house)
+    HogwartsOutsourcedService.new(@house)
   end
 
 end

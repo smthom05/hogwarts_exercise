@@ -17,7 +17,6 @@ describe 'House index' do
       expect(page).to have_content("22 Students")
       # And I should see a list of the 22 members of Slytherin
       # And I should see a name and id for each student. -->
-      save_and_open_page
       within '.students' do
         expect(page).to have_css('.name', count: 22)
         expect(page).to have_css('.id', count: 22)
